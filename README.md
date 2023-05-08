@@ -137,6 +137,9 @@ Las contribuciones son bienvenidas. Para contribuir, se debe crear un fork del p
 [@Guidotss](https://github.com/Guidotss)
 
 
+## Despliegue
+
+El proyecto se encuentra desplegado en [Vercel](https://vercel.com/). Se puede acceder a la aplicación en el siguiente enlace: [https://chat-gpt-guidotss.vercel.app/auth/login](https://chat-gpt-guidotss.vercel.app/auth/login)
 
 
 
