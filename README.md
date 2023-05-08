@@ -1,94 +1,142 @@
-# proyecto2023
-Estructura de Proyecto Lab de Compu II - 2023
 
-## Requisitos del Primer Parcial
+# Chat-GPT clone 
 
-### Sobre el Repositorio
-- [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
-- [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
-- [ ] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
-- [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
-- [ ] Publicar la Web empleando GitHubPages
-- [ ] El repositorio no debe contener archivos innecesarios (no debe contener .idea o .vsc, en todo caso emplear **.gitignore**)
+Este es un clon del proyecto [Chat-GPT](https://chat.openai.com/chat) de OpenAI. El objetivo es crear un chatbot que pueda responder a preguntas de forma natural. Para ello se ha utilizado el modelo [GPT-3](https://openai.com/blog/gpt-3-apps/) de OpenAI.
 
-### Sobre el Proyecto General
-- [ ] La página principal debe llamarse index
-- [ ] Identar correctamente el código (en Webstorm Ctrl+Alt+L)
-- [ ] No debe haber errores presentes (realizar *Code* > *Inspect Code* para verificar que no haya errores)
-- [ ] Se debe emplear algún favicon
-- [ ] Emplear alguna fuente de google fonts o subir al proyecto alguna fuente externa
-- [ ] Debe haber navegación entre todas las páginas
+## Instalación
 
-### Sobre el HTML
-- [ ] Todas las etiquetas deben estar en minúscula
-- [ ] Poner comillas a todos los atributos
-- [ ] Title debe contener el título de la página
-- [ ] En el ```<head></head>``` incluir las etiquetas ```<meta>``` detallando: autor, descripcion y palabras clave
-- [ ] Emplear al menos 3 etiquetas semánticas diferentes (header, nav, aside, main, section, article, footer)
-- [ ] Emplear ```<header></header>```. En el contenido de la cabecera debe haber un título ```<h1></h1>```, puede tener color de fondo, algún logotipo, etc.
-- [ ] Debe haber por lo menos una etiqueta ```<img>``` en la página.
-- [ ] La estructura de la página debe estar definida con ```<div></div>```
-- [ ] Debe contener al menos 3 elementos de tipo ```<input>``` o ```<select>``` ó ```<button>``` que le permitan al usuario ingresar valores para poder realizar un cálculo de un ejercicio.
-- [ ] Debe contener un ```<canvas>```, para que posteriormente (en la 2da etapa) se grafique alguna imagen representativa del ejercicio. (el desarrollo del gráfico se realizará cuando se vea la unidad de “Orientación a Eventos”)
-- [ ] No espaciar con excesivos ```<br>```. Utilizar márgenes, paddings, etc.
-- [ ] No utilizar etiquetas deprecadas.
-- [ ] Todas las etiquetas deben estar correctamente cerradas
-- [ ] Los ids de los elementos deben ser unívocos
+Para instalar el proyecto, se debe ejecutar el siguiente comando:
 
-### Sobre el CSS
-- [ ] El estilo de los elementos debe establecerse en un archivo CSS (prohibido poner el atributo style a los elementos o emplear estilos incrustados).
-- [ ] El CSS debe contar mínimo con un tipo de cada forma (por Tag, por ID y por clase).
-- [ ] Se debe emplear pseudoclase
-- [ ] No emplear !important
+```bash
 
-### Sobre Accesibilidad:
-- [ ] Toda imagen debe tener su etiqueta alt
-- [ ] Todo ```<input>``` o ```<select>``` debe tener su ```<label>```
-- [ ] Los labels deben contener el atributo **for** (el for debe contener el id del input al cual se referencia) 
-- [ ] Si hay una tabla en la página, debe contener ```<caption></caption>```
+npm install
 
-### Sobre las correcciones
-* Se corregirá el proyecto con el último commit realizado en Github hasta las 23:59 del día anterior a la fecha de entrega
-* Las notas serán de manera logarítmica: (Por ejemplo 60% 4; 70% 5,5; 80% 7; 90% 8,5)
+# o 
+
+yarn install
 
 
+```
 
-## Requisitos del Segundo Parcial
+## Ejecución
 
-### Sobre el proyecto general
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer parcial deben estar corregidas.
-- [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScripts presentes. (ver con F12 si hay errores)
+1. Cambiar el nombre del archivo `.template.env` a `.env` y agregar las variables de entorno.
+2. Reemplazar el valor de la variable `OPENAI_API_KEY` con la API key de OpenAI.
+3. Reemplazar el valor de la variable de entorno `MONGO_URL` con la URL de la base de datos de MongoDB.
+4. Reemplazar el valor de la variable de entorno `JWT_SECRET` con una cadena de texto aleatoria.
 
-### Sobre la funcionalidad JavaScript
-Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
-- [ ] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert, y que blanquee el contenido del campo.
-- [ ] Una función que calcule algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
-- [ ] El código Js debe estar en un archivo externo
-- [ ] Se debe emplear var, let o const según corresponda para mayor eficiencia
+Para ejecutar el proyecto de forma local, se deben ejecutar los  siguientes comandos:
 
-### Sobre la documentación
-- [ ] TODAS las funciones javaScript deben estar comentadas adecuadamente. [JsDoc](https://jsdoc.app/about-getting-started.html)
-   ```/**
-     * Descripción de que hace la función
-     * @method Nombre de la función
-     * @param {string} ParámetroA - Explicación de que valor almacena ParámetroA
-     * @param {number} ParámetroB - Explicación de que valor almacena ParámetroB
-     * @return Valor que retorna
-     */
-   ```
-   
-### Sobre las correcciones
-* Se corregirá el proyecto con el último commit realizado en Github hasta las 23:59 del día anterior a la fecha de entrega
-* Las notas serán de manera logarítmica: (Por ejemplo 60% 4; 70% 5,5; 80% 7; 90% 8,5)
-* Las sugerencias sobre el HTML y CSS realizadas en el anterior parcial dejen ser corregidas.
+```bash
+docker-compose up -d
+```
 
-   
-## Requisitos del FINAL
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
-- [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
-- [ ] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar, si hay nuevos inputs de html deben contener su label, etc)
-- [ ] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
-- [ ] El cálculo del ejercicio de física/etc debe ser el correcto, independientemente de los valores ingresados.
+este comando levantará un contenedor de MongoDB.
+
+```bash
+
+npm install
+
+# o 
+
+yarn install
+
+```
+
+este comando instalará las dependencias del proyecto.
+
+```bash
+
+npm run dev
+
+# o
+
+yarn dev
+
+```
+
+este comando ejecutará el proyecto en modo desarrollo.
+
+## Ejecutar en producción
+
+Para ejecutar el proyecto en producción, se deben ejecutar los siguientes comandos:
+
+```bash
+
+npm run build
+
+# o
+
+yarn build
+
+```
+
+este comando creará la carpeta `build` con el código compilado del proyecto.
+
+```bash
+
+npm run start
+
+# o
+
+yarn start
+
+```
+
+este comando ejecutará el proyecto en modo producción.
+
+
+## Uso
+
+Para usar el proyecto, se debe acceder a la ruta `http://localhost:3000/` y se podrá ver la aplicación.
+
+### Rutas de la API
+
+- `POST /api/auth/login` - Iniciar sesión.
+- `POST /api/auth/register` - Registrar usuario.
+- `POST /api/auth/validate-token` - Validar token de acceso del usuario.
+- `POST /api` - Enviar mensaje al chatbot.
+
+### Servicios
+
+#### `UserService`
+
+Este servicio se encarga de manejar la lógica de negocio de los usuarios.
+
+##### Metodos de `UserService`
+
+- `hashPassword(password: string)` - Encripta una contraseña y retorna una promesa con el hash de la contraseña.
+-  `comparePassword(password: string, hash: string)` - Compara una contraseña con un hash y retorna una promesa con un booleano indicando si la contraseña es correcta.
+
+- `register(name:string, email:string, password:string)` - Registra un usuario en la base de datos y retorna una promesa con el usuario registrado o un booleano indicando si el usuario ya existe.
+- `login(email:string, password:string)` - Inicia sesión con un usuario y retorna una promesa con el usuario o un booleano indicando si el usuario no existe o la contraseña es incorrecta.
+- `getUserById(id:string)` - Retorna una promesa con un usuario o un booleano indicando si el usuario no existe.
+
+
+## Tecnologías
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [OpenAI](https://openai.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [JWT](https://jwt.io/)
+- [Mongoose](https://mongoosejs.com/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+## Licencia
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Contribución
+
+Las contribuciones son bienvenidas. Para contribuir, se debe crear un fork del proyecto, realizar los cambios y crear un pull request.
+
+## Autor
+
+[@Guidotss](https://github.com/Guidotss)
+
+
+
+
+
