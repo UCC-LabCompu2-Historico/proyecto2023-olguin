@@ -42,13 +42,13 @@ export const MessageList = () => {
                 />
               )}
             </Avatar>
-            <p className='self-center'>
+            <div className='self-center'>
               {message.ia ? (
                 <TypingEffect text={message.message} />
               ) : (
                 message.message
               )}
-            </p>
+            </div>
           </div>
         ))}
         {loading && (
