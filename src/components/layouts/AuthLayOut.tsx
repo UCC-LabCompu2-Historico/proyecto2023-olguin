@@ -8,6 +8,14 @@ interface AuthLayOutProps {
   fullUrlImage?: string;
 }
 
+/*
+  Componente que contiene el layout de la pagina de autenticacion
+  @param {React.ReactNode} children - Componentes hijos
+  @param {string} title - Titulo de la pagina
+  @param {string} description - Descripcion de la pagina
+  @param {string} fullUrlImage - Url de la imagen para compartir en redes sociales
+  @returns {React.ReactElement} - Componente AuthLayOut
+*/
 export const AuthLayOut: FC<AuthLayOutProps> = ({ children,title,description,fullUrlImage }) => {
   return (
     <div>

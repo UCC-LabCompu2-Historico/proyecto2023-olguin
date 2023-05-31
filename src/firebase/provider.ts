@@ -5,6 +5,10 @@ import { firebaseAuth } from './config';
 
 const googleProvider = new GoogleAuthProvider(); 
 
+/*
+    Funcion que se encarga de iniciar sesion con google haciendo uso de firebase
+    @returns {Promise<{ok: boolean, user: any, error?: string}>} - Promesa que se resuelve cuando se inicia sesion o cuando ocurre un error
+*/
 export const signInWithGoogle = async() => {
     
     try{

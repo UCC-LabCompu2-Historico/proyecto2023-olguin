@@ -7,6 +7,11 @@ type UiActionType =
     | { type:'[UI] - Close Sidebar', payload: boolean}
 
 
+/* 
+    Reducer para el contexto de UI
+    @param {UiState} state - Estado del contexto
+    @param {UiActionType} action - Acción a ejecutar
+*/
 export const uiReducer = (state: UiState, action: UiActionType): UiState => {
     switch(action.type) {
         case '[UI] - Toggle Theme':

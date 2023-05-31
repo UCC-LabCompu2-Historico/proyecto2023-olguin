@@ -1,6 +1,10 @@
 import { ChatLayOut } from '@/components';
 import { Chat } from '@/components/chat';
 
+/*
+  Componente que renderiza la pagina de inicio de la aplicacion web
+  @returns {React.ReactElement} - Retorna la pagina de inicio
+*/
 const Home = () => {
   return (
     <ChatLayOut 

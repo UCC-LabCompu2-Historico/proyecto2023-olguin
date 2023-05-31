@@ -12,4 +12,8 @@ interface AuthContextProps {
   startSignInWithGoogle: () => Promise<boolean>;
 }
 
+/*
+  Contexto que se encarga de manejar la autenticacion de la aplicacion
+  @returns {React.Context} - Contexto de autenticacion
+*/
 export const AuthContext = createContext({} as AuthContextProps);

@@ -1,3 +1,7 @@
+/*
+  Componente que se encarga de renderizar el icono de configuraciones en el sidebar
+  @returns {React.ReactElement} - Componente SettingIcon
+*/
 export const SettingIcon = () => {
   return (
     <svg

@@ -1,3 +1,7 @@
+/* 
+  Componente que se encarga de renderizar el icono de google
+  @returns {React.ReactElement} - Componente GoogleIcon
+*/
 export const GoogleIcon = () => {
   return (
     <svg

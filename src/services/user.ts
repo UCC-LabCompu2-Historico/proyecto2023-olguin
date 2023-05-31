@@ -1,5 +1,10 @@
 import bcrypt from 'bcrypt';
 import { User } from '@/models';
+
+
+/*
+  Clase que se encarga de manejar las peticiones a la base de datos relacionadas con los usuarios
+*/
 export class UserService {
   private user:typeof User;
 
@@ -7,6 +12,11 @@ export class UserService {
     this.user = User;
   }
 
+  /*
+    Metodo que se encarga de encriptar la contraseña del usuario
+    @param {string} password - Contraseña del usuario
+    @return {Promise<string>} - Contraseña encriptada
+  */
   private async hashPassword(password: string) {
     try {
       const salt = await bcrypt.genSalt(10);
@@ -18,6 +28,12 @@ export class UserService {
     }
   }
 
+  /*
+    Metodo que se encarga de comparar la contraseña del usuario con la contraseña encriptada
+    @param {string} password - Contraseña del usuario
+    @param {string} hash - Contraseña encriptada
+    @return {Promise<boolean>} - Resultado de la comparacion
+  */
   private async comparePassword(password: string, hash: string) {
     try {
       const result = await bcrypt.compare(password, hash);
@@ -27,6 +43,13 @@ export class UserService {
     }
   }
 
+  /*
+    Metodo que se encarga de registrar un nuevo usuario en la base de datos
+    @param {string} name - Nombre del usuario
+    @param {string} email - Correo electronico del usuario
+    @param {string} password - Contraseña del usuario
+    @return {Promise<IUser>} - Usuario registrado
+  */
   public async register(name: string, email: string, password: string) {
     try {
       if (!name || !email || !password) throw new Error('Missing fields');
@@ -49,6 +72,12 @@ export class UserService {
     }
   }
 
+  /*
+    Metodo que se encarga de loguear un usuario en la base de datos
+    @param {string} email - Correo electronico del usuario
+    @param {string} password - Contraseña del usuario
+    @return {Promise<IUser>} - Usuario logueado
+  */
   public async login(email: string, password: string) {
     try {
       const user = await this.user.findOne({ email: email }).lean();
@@ -63,6 +92,11 @@ export class UserService {
     }
   }
 
+  /*
+    Metodo que se encarga de obtener un usuario de la base de datos
+    @param {string} id - Id del usuario
+    @return {Promise<IUser>} - Usuario obtenido
+  */
   public async getUserById(id: string) {
     try {
       const user = await this.user.findById(id).lean();
@@ -74,6 +108,15 @@ export class UserService {
     }
   }
 
+  /*
+    Metodo que se encarga de actualizar la informacion de un usuario en la base de datos
+    @param {string} id - Id del usuario
+    @param {string} name - Nombre del usuario
+    @param {string} email - Correo electronico del usuario
+    @param {string} imageUrl - Url de la imagen del usuario
+    @param {string} password - Contraseña del usuario
+    @return {Promise<IUser>} - Usuario actualizado
+  */
   public async updateUSerInfo(id?: string,name?: string,email?: string,imageUrl?: string, password?: string) {
     try {
       const user = await this.user.findById(id).lean();

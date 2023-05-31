@@ -1,3 +1,9 @@
+
+/*
+    Funcion que se encarga de subir una imagen a cloudinary
+    @param {File} file - Archivo a subir
+    @returns {Promise<string>} - Promesa que se resuelve cuando se sube la imagen o cuando ocurre un error
+*/
 export const updateImage = async(file: File) => {
 
     const formData = new FormData();

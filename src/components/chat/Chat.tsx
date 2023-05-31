@@ -5,11 +5,24 @@ import { ChatContext } from '@/context/chat';
 import { MessageList, ChatDescription } from './';
 import { UiContext } from '@/context/ui';
 
+
+/* 
+  Componente que contiene la lista de mensajes y el formulario para enviar mensajes
+  Si no hay mensajes, se muestra el componente ChatDescription
+
+  @returns {React.ReactElement} - Componente Chat
+  
+*/
 export const Chat = () => {
   const { messages, sendMessage } = useContext(ChatContext);
   const [value, setValue] = useState('');
   const { theme } = useContext(UiContext)
 
+  /*
+    Funcion que se ejecuta al enviar un mensaje
+    @param {FormEvent} e - Evento del formulario
+    @returns {void} - No retorna nada
+  */
   const onSubmitMessage = (e: FormEvent) => {
     e.preventDefault();
     if (value.length > 0) {

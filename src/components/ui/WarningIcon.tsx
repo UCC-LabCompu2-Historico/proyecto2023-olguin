@@ -1,6 +1,11 @@
 import { UiContext } from "@/context/ui";
 import { useContext } from "react";
 
+
+/*
+  Componente que se encarga de renderizar el icono de advertencia en el componente chatDescription para indicar las limitaciones de la aplicacion
+  @returns {React.ReactElement} - Componente WarningIcon
+*/
 export const WarningIcon = () => {
 
   const { theme } = useContext(UiContext)

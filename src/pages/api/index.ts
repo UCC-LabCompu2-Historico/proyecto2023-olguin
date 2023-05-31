@@ -3,6 +3,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 type Data = { error: string } | { data: IAChoices };
 
+/*
+  Funcion que se encarga de manejar las peticiones a la ruta /api
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {Promise<void>} - Promesa que se resuelve cuando se maneja la peticion o cuando ocurre un error
+*/
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -15,6 +21,12 @@ export default function handler(
   }
 }
 
+/*
+  Funcion que se encarga de manejar las peticiones POST a la ruta /api y devolver la respuesta de la IA
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 const GetIAinfo = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const { prompt } = req.body;
 

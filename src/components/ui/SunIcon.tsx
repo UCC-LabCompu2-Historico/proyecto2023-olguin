@@ -1,6 +1,10 @@
 import { UiContext } from "@/context/ui";
 import { useContext } from "react";
 
+/* 
+  Componente que se encarga de renderizar el icono del sol en el sidebar para cambiar el tema de color
+  @returns {React.ReactElement} - Componente SunIcon
+*/
 export const SunIcon = () => {
 
   const { theme } = useContext(UiContext); 

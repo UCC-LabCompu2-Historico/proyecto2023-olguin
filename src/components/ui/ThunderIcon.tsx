@@ -1,6 +1,11 @@
 import { UiContext } from "@/context/ui";
 import { useContext } from "react";
 
+
+/*
+  Componente que se encarga de renderizar el icono del rayo en el componente chatDescription para indicar las capacidades de la aplicacion
+  @returns {React.ReactElement} - Componente ThunderIcon
+*/
 export const ThunderIcon = () => {
 
   const { theme } = useContext(UiContext)

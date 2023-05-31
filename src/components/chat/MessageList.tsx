@@ -6,6 +6,11 @@ import { GptIcon } from '../ui/GptIcon';
 import { AuthContext } from '@/context/auth';
 import { UiContext } from '@/context/ui';
 
+
+/* 
+  Componente que contiene la lista de mensajes del chat
+  @returns {React.ReactElement} - Componente MessageList
+*/
 export const MessageList = () => {
 
   const { messages, loading } = useContext(ChatContext);
@@ -14,7 +19,9 @@ export const MessageList = () => {
   const { user } = useContext(AuthContext);
   const { theme } = useContext(UiContext);
 
-
+  /* 
+    Hook que se ejecuta cuando se actualiza el estado de messages y hace scroll hacia abajo
+  */
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages]); 

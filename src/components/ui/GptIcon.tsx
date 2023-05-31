@@ -1,3 +1,8 @@
+
+/*
+  Componente que contiene se encarga de renderizar el icono de GPT
+  @returns {React.ReactElement} - Componente GptIcon
+*/
 export const GptIcon = () => {
   return (
     <svg

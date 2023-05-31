@@ -11,6 +11,11 @@ type FormDataType = {
   password: string;
 };
 
+
+/*
+  Componente que renderiza la pagina de login de la aplicacion web 
+  @returns {React.ReactElement} - Retorna la pagina de login
+*/
 const LoginPage = () => {
   const {
     handleSubmit,
@@ -23,6 +28,11 @@ const LoginPage = () => {
   const { login, startSignInWithGoogle } = useContext(AuthContext);
   const router = useRouter();
 
+  /*
+    Funcion que se encarga de manejar el evento submit del formulario de login
+    @param {FormDataType} - Datos del formulario
+    @returns {Promise<void>} - Retorna una promesa vacia
+  */
   const handleLogin = async ({ email, password }: FormDataType) => {
     const ok = await login({ email, password });
     if (ok) {
@@ -36,6 +46,10 @@ const LoginPage = () => {
     return;
   };
 
+  /* 
+    Funcion que se encarga de manejar el evento click del boton de iniciar sesion con google
+    @returns {Promise<void>} - Retorna una promesa vacia
+  */
   const handleSingInWithGoogle = async () => {
     const ok = await startSignInWithGoogle();
 

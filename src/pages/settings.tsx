@@ -12,6 +12,10 @@ type userUpdate = {
   avatar?: FileList;
 };
 
+/*
+  Componente que renderiza la pagina de configuracion de la aplicacion web
+  @returns {React.ReactElement} - Retorna la pagina de configuracion
+*/
 const SettingsPage = () => {
   const { user, updateUser } = useContext(AuthContext);
   const {
@@ -21,6 +25,11 @@ const SettingsPage = () => {
   } = useForm<userUpdate>();
   const router = useRouter();
 
+  /*
+    Funcion que se encarga de manejar el evento submit del formulario de configuracion
+    @param {userUpdate} - Datos del formulario
+    @returns {Promise<void>} - Retorna una promesa vacia
+  */
   const handleUpdateUser = async ({
     name,
     email,

@@ -3,6 +3,10 @@ import { SunIcon, ThunderIcon, WarningIcon } from '../ui';
 import { UiContext } from '@/context/ui';
 import { ChatContext } from '@/context/chat';
 
+/* 
+  Componente que contiene la descripcion del chat y ejemplos de mensajes
+  @returns {React.ReactElement} - Componente ChatDescription
+*/
 export const ChatDescription = () => {
 
   const { theme,sidebar,closeSidebar } = useContext(UiContext); 

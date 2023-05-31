@@ -9,21 +9,35 @@ import { SunIcon } from './SunIcon';
 import { SettingIcon } from './SettingIcon';
 import Link from 'next/link';
 
+/*
+  Componente que contiene el sidebar de la pagina de chat
+  @returns {React.ReactElement} - Componente SideBar
+*/
+
 export const SideBar = () => {
   const { messages, deleteChat } = useContext(ChatContext);
   const { logout } = useContext(AuthContext);
   const { toggleTheme, theme } = useContext(UiContext);
   const router = useRouter();
 
+  /*
+    Funcion que se ejecuta al eliminar el chat y llama a la funcion deleteChat del context ChatContext
+  */
   const handleDeleteChat = () => {
     deleteChat();
   };
 
+  /* 
+    Funcion que se ejecuta al cerrar sesion y llama a la funcion logout del context AuthContext
+  */
   const handleLogout = () => {
     logout();
     router.push('/auth/login');
   };
 
+  /* 
+    Funcion que se ejecuta al cambiar el tema y llama a la funcion toggleTheme del context UiContext
+  */
   const handleToggleTheme = () => {
     toggleTheme();
   };

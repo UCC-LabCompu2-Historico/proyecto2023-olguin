@@ -8,6 +8,13 @@ type Data = {
   user: { name?: string; email: string; avatar?: string; _id: string } | null;
 };
 
+
+/*
+  Funcion que se encarga de manejar las peticiones a la ruta /api/auth/update-user
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -22,6 +29,13 @@ export default function handler(
   }
 }
 
+
+/*
+  Funcion que se encarga de manejar las peticiones PUT a la ruta /api/auth/update-user y devolver la respuesta de la IA
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 const UpdateUser = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   const { name, email, password, _id,imageUrl } = req.body;
   console.log(_id);

@@ -9,5 +9,7 @@ interface UiContextProps {
     closeSidebar: () => void;
 }
 
-
+/* 
+    Contexto que se encarga de manejar el estado de la aplicacion relacionado con la interfaz de usuario
+*/
 export const UiContext = createContext({} as UiContextProps);

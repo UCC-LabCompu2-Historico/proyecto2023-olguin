@@ -5,6 +5,13 @@ type AuthActionTypes =
   | { type: '[AUTH] - Login'; payload: IUser }
   | { type: '[AUTH] - Logout' };
 
+
+/* 
+  Reducer para el contexto de autenticación
+  @param { AuthState } state - Estado del contexto
+  @param { AuthActionTypes } action - Acción a ejecutar
+  @returns { AuthState } - Nuevo estado del contexto
+*/
 export const authReducer = (state: AuthState,action: AuthActionTypes): AuthState => {
   switch (action.type) {
     case '[AUTH] - Login':

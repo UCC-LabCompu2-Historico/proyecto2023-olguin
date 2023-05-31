@@ -1,3 +1,7 @@
+/* 
+  Componente que se encarga de renderizar el icono del menu unicamente en dispositivos moviles
+  @returns {React.ReactElement} - Componente MenuIcon
+*/
 export const MenuIcon = () => {
   return (
     <svg

@@ -9,6 +9,13 @@ type Data =
   | { message: string }
   | { ok: boolean; token: string; user: { name?: string; email: string, avatar?:string,_id:string } };
 
+
+/*
+  Funcion que se encarga de manejar las peticiones a la ruta /api/auth/validate-token
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
   switch (req.method) {
     case 'GET':
@@ -18,6 +25,12 @@ export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
   }
 }
 
+/*
+  Funcion que se encarga de manejar las peticiones GET a la ruta /api/auth/validate-token y devolver la respuesta de la IA
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 const validateToken = async (req: NextApiRequest,res: NextApiResponse<Data>) => {
   const { token = '' } = req.cookies;
   let userId:UserId;

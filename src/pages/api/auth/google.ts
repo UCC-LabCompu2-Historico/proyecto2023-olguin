@@ -9,6 +9,12 @@ type Data =
       token: string;
     };
 
+/* 
+  Funcion que se encarga de manejar las peticiones a la ruta /api/auth/google
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
   switch (req.method) {
     case 'POST':
@@ -18,6 +24,12 @@ export default function (req: NextApiRequest, res: NextApiResponse<Data>) {
   }
 }
 
+/* 
+  Funcion que se encarga de manejar las peticiones POST a la ruta /api/auth/google y devolver la respuesta de la IA
+  @param {NextApiRequest} req - Request de la peticion
+  @param {NextApiResponse} res - Respuesta de la peticion
+  @return {NextApiResponse} - Respuesta de la peticion
+*/
 const loginWithGoogle = async (req: NextApiRequest,res: NextApiResponse<Data>) => {
   const { displayName, email, uid, providerId, photoURL } = req.body;
   if (!displayName || !email || !uid || !providerId || !photoURL) {

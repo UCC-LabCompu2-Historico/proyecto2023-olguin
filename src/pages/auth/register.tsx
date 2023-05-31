@@ -11,6 +11,11 @@ type FormDataType = {
   password: string;
 };
 
+
+/*
+  Componente que renderiza la pagina de registro de la aplicacion web
+  @returns {React.ReactElement} - Retorna la pagina de registro
+*/
 const RegisterPage = () => {
   const [showErrors, setShowErrors] = useState<boolean>(false);
   const [ errorMessage, setErrorMessage ] = useState<string>('');
@@ -18,6 +23,12 @@ const RegisterPage = () => {
   const { register: registerUser } = useContext(AuthContext);
   const router = useRouter();
 
+
+  /*
+    Funcion que se encarga de manejar el evento submit del formulario de registro
+    @param {FormDataType} - Datos del formulario
+    @returns {Promise<void>} - Retorna una promesa vacia
+  */
   const onSubmit = async (data: FormDataType) => {
     const { name, email, password } = data;
     const ok = await registerUser({ name, email, password });

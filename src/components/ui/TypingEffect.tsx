@@ -4,6 +4,11 @@ interface TypingEffectCanvasProps {
   text: string;
 }
 
+/* 
+  Componente que se encarga de renderizar el efecto de escritura en el chat de la aplicacion haciendo uso de canvas
+  @param {string} text - Texto a mostrar
+  @returns {React.ReactElement} - Componente TypingEffect
+*/
 export const TypingEffect: React.FC<TypingEffectCanvasProps> = ({ text }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [displayText, setDisplayText] = useState('');

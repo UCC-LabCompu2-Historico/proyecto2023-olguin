@@ -8,6 +8,12 @@ type ChatActionType =
   | { type: '[CHAT] - Stop Loading'; payload: boolean }
   | { type: '[CHAT] - Delete Chat'; payload: [] };
 
+/* 
+  Reducer que se encarga de manejar el estado de la aplicación en el contexto de chat
+  @param {ChatState} state - Estado del contexto de chat
+  @param {ChatActionType} action - Acción que se ejecuta en el reducer
+  @returns {ChatState} - Nuevo estado del contexto de chat
+*/
 export const chatReducer = (
   state: ChatState,
   action: ChatActionType
