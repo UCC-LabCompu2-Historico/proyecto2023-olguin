@@ -20,3 +20,8 @@
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
   transition: background-color 0.2s ease-in-out;
 }
+
+form { 
+  display: flex; 
+  flex-direction: column;
+}
