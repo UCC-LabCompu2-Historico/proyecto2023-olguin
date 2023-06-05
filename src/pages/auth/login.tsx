@@ -11,7 +11,6 @@ type FormDataType = {
   password: string;
 };
 
-
 /*
   Componente que renderiza la pagina de login de la aplicacion web 
   @returns {React.ReactElement} - Retorna la pagina de login
@@ -22,7 +21,7 @@ const LoginPage = () => {
     register,
     formState: { errors }
   } = useForm<FormDataType>();
-  
+
   const [errorMessage, setErrorMessage] = useState<string>();
   const [showErrorMessage, setShowErrorMessage] = useState<boolean>(false);
   const { login, startSignInWithGoogle } = useContext(AuthContext);
@@ -147,8 +146,9 @@ const LoginPage = () => {
             )}
           </div>
           <button
-            className='bg-gptlogo sm:hover:bg-green-700 text-white font-bold sm:py-2 sm:px-3 rounded-full focus:outline-none focus:shadow-outline sm:w-1/2 mt-2 w-1/2 h-12'
+            className='bg-gptlogo text-white font-bold sm:py-2 sm:px-3 rounded-full focus:outline-none focus:shadow-outline sm:w-1/2 mt-2 w-1/2 h-12'
             type='submit'
+            id="login-button"
           >
             Iniciar sesion
           </button>
