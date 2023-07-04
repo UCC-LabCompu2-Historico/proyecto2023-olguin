@@ -2,7 +2,7 @@ import { FC, MouseEvent, useContext } from 'react';
 import Head from 'next/head';
 import { SideBar } from '../index';
 import { UiContext } from '@/context/ui';
-import { MenuIcon } from '../ui/MenuIcon';
+import { MenuIcon } from '../ui/icons/MenuIcon';
 
 
 interface ChatLayOutProps {

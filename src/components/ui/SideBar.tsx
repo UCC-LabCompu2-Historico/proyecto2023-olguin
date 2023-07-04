@@ -5,8 +5,8 @@ import { ChatContext } from '@/context/chat';
 import { TypingEffect } from './TypingEffect';
 import { AuthContext } from '@/context/auth';
 import { UiContext } from '@/context/ui';
-import { SunIcon } from './SunIcon';
-import { SettingIcon } from './SettingIcon';
+import { SunIcon } from './icons/SunIcon';
+import { SettingIcon } from './icons/SettingIcon';
 import Link from 'next/link';
 
 /*

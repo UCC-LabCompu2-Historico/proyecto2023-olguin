@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { ChatContext } from '@/context/chat';
 import { Avatar, TypingEffect } from '../ui';
-import { GptIcon } from '../ui/GptIcon';
+import { GptIcon } from '../ui/icons/GptIcon';
 import { AuthContext } from '@/context/auth';
 import { UiContext } from '@/context/ui';
 
